@@ -40,7 +40,7 @@ def load_and_train_model():
 
     X = df[features]
     y = df["price"]
-
+svm_model = SVR(kernel="rbf", C=500000, gamma=1.0, epsilon=0.01)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     scaler = StandardScaler()
